@@ -202,10 +202,7 @@
 
     if (document.getElementById("website").value) return; // robot détecté
 
-    if (SCRIPT_URL.indexOf("script.google.com") === -1) {
-      statusEl.textContent = "Le formulaire n’est pas encore relié à Google Sheets (URL du script manquante).";
-      return;
-    }
+  
 
     let q6 = checked("q6");
     if (q6 === "Autre") q6 = "Autre : " + otherInput.value.trim();
