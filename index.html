@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Évaluation du webinaire – UNJED-BÉNIN</title>
+<meta name="description" content="Formulaire d’évaluation du webinaire « Rédigez un CV qui se démarque en 5 secondes en votre absence » – UNJED-BÉNIN.">
+<style>
+  :root{
+    --navy:#1B2A41; --ink:#2B3545; --slate:#6B7C93; --gold:#C99A2E; --teal:#2A7F86;
+    --bg:#F5F7FA; --card:#FFFFFF; --line:#DDE3EC; --err:#B3261E;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Calibri,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;font-size:16px}
+  .wrap{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+  header.hero{background:var(--navy);color:#fff;border-radius:16px;padding:28px 24px;margin-bottom:18px}
+  .org{font-size:12px;letter-spacing:.18em;font-weight:700;color:#E8C46A;margin:0 0 10px}
+  h1{font-size:clamp(22px,5.2vw,30px);line-height:1.2;margin:0 0 10px}
+  .theme{margin:0 0 12px;font-size:16px;color:#E5EAF2}
+  .theme strong{color:#fff}
+  .intro{margin:0;font-size:15px;color:#C9D3E3}
+  .legend-req{font-size:13px;color:var(--slate);margin:0 4px 14px}
+  fieldset.q{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;padding:18px 18px 16px}
+  fieldset.q.invalid{border-color:var(--err);box-shadow:0 0 0 2px rgba(179,38,30,.12)}
+  legend{padding:0;float:left;width:100%;font-weight:700;color:var(--navy);font-size:16.5px;margin-bottom:10px}
+  legend+*{clear:both}
+  .req{color:var(--err);margin-left:2px}
+  .opts{display:grid;gap:8px}
+  .opt{position:relative}
+  .opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+  .opt label{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;transition:border-color .15s,background .15s}
+  .opt label::before{content:"";flex:0 0 20px;height:20px;border-radius:50%;border:2px solid #B8C2D0;background:#fff;transition:all .15s}
+  .opt input:checked+label{border-color:var(--teal);background:#EEF6F6}
+  .opt input:checked+label::before{border-color:var(--teal);background:radial-gradient(circle,var(--teal) 0 45%,#fff 50%)}
+  .opt input:focus-visible+label{outline:3px solid rgba(42,127,134,.35);outline-offset:2px}
+  .other-box{display:none;margin-top:8px}
+  .other-box.show{display:block}
+  textarea,input[type=text]{width:100%;font:inherit;color:var(--ink);padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;resize:vertical}
+  textarea{min-height:110px}
+  textarea:focus,input[type=text]:focus{outline:3px solid rgba(42,127,134,.3);border-color:var(--teal)}
+  .err{display:none;color:var(--err);font-size:13.5px;margin-top:8px}
+  fieldset.invalid .err{display:block}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .actions{margin-top:20px}
+  button{font:inherit;font-weight:700;background:var(--gold);color:var(--navy);border:0;border-radius:12px;padding:14px 26px;cursor:pointer;width:100%;font-size:17px}
+  button:hover{filter:brightness(.96)}
+  button:disabled{opacity:.6;cursor:wait}
+  .status{margin-top:12px;font-size:14.5px;color:var(--err);min-height:1.2em}
+  .thanks{display:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 24px;text-align:center}
+  .thanks .tick{width:56px;height:56px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-size:30px}
+  .thanks h2{margin:0 0 8px;color:var(--navy)}
+  .thanks p{margin:0;color:var(--ink)}
+  footer{text-align:center;color:var(--slate);font-size:13px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="org">UNJED-BÉNIN</p>
+    <h1>Formulaire d’évaluation du webinaire</h1>
+    <p class="theme"><strong>Thème :</strong> « Rédigez un CV qui se démarque en 5 secondes en votre absence »</p>
+    <p class="intro">Merci d’avoir participé à cette séance de formation. Votre avis nous permettra d’évaluer cette activité et d’améliorer nos prochaines initiatives.</p>
+  </header>
+
+  <form id="form" novalidate>
+    <p class="legend-req"><span class="req">*</span> Question obligatoire</p>
+
+    <fieldset class="q" data-required="true" data-name="q1">
+      <legend>1. Comment évaluez-vous globalement cette séance de formation ? <span class="req">*</span></legend>
+      <div class="opts">
+        <div class="opt"><input type="radio" name="q1" id="q1a" value="Excellent"><label for="q1a">Excellent</label></div>
+        <div class="opt"><input type="radio" name="q1" id="q1b" value="Très bien"><label for="q1b">Très bien</label></div>
+        <div class="opt"><input type="radio" name="q1" id="q1c" value="Bien"><label for="q1c">Bien</label></div>
+        <div class="opt"><input type="radio" name="q1" id="q1d" value="Passable"><label for="q1d">Passable</label></div>
+        <div class="opt"><input type="radio" name="q1" id="q1e" value="Décevant"><label for="q1e">Décevant</label></div>
+      </div>
+      <div class="err">Merci de choisir une réponse.</div>
+    </fieldset>
+
+    <fieldset class="q" data-required="true" data-name="q2">
+      <legend>2. Les explications de l’intervenant étaient-elles claires et faciles à comprendre ? <span class="req">*</span></legend>
+      <div class="opts">
+        <div class="opt"><input type="radio" name="q2" id="q2a" value="Très claires"><label for="q2a">Très claires</label></div>
+        <div class="opt"><input type="radio" name="q2" id="q2b" value="Assez claires"><label for="q2b">Assez claires</label></div>
+        <div class="opt"><input type="radio" name="q2" id="q2c" value="Peu claires"><label for="q2c">Peu claires</label></div>
+        <div class="opt"><input type="radio" name="q2" id="q2d" value="Pas du tout claires"><label for="q2d">Pas du tout claires</label></div>
+      </div>
+      <div class="err">Merci de choisir une réponse.</div>
+    </fieldset>
+
+    <fieldset class="q">
+      <legend><label for="q3">3. Qu’avez-vous retenu de plus important au cours de cette formation ?</label></legend>
+      <textarea id="q3" name="q3" placeholder="Votre réponse"></textarea>
+    </fieldset>
+
+    <fieldset class="q" data-required="true" data-name="q4">
+      <legend>4. Pensez-vous pouvoir appliquer les conseils reçus pour améliorer votre CV ? <span class="req">*</span></legend>
+      <div class="opts">
+        <div class="opt"><input type="radio" name="q4" id="q4a" value="Oui, certainement"><label for="q4a">Oui, certainement</label></div>
+        <div class="opt"><input type="radio" name="q4" id="q4b" value="Oui, en partie"><label for="q4b">Oui, en partie</label></div>
+        <div class="opt"><input type="radio" name="q4" id="q4c" value="Pas encore"><label for="q4c">Pas encore</label></div>
+        <div class="opt"><input type="radio" name="q4" id="q4d" value="Non"><label for="q4d">Non</label></div>
+      </div>
+      <div class="err">Merci de choisir une réponse.</div>
+    </fieldset>
+
+    <fieldset class="q">
+      <legend><label for="q5">5. Qu’avez-vous particulièrement apprécié pendant cette séance ?</label></legend>
+      <textarea id="q5" name="q5" placeholder="Votre réponse"></textarea>
+    </fieldset>
+
+    <fieldset class="q" data-required="true" data-name="q6">
+      <legend>6. Avez-vous rencontré des difficultés pendant la formation ? <span class="req">*</span></legend>
+      <div class="opts">
+        <div class="opt"><input type="radio" name="q6" id="q6a" value="Aucune difficulté"><label for="q6a">Aucune difficulté</label></div>
+        <div class="opt"><input type="radio" name="q6" id="q6b" value="Problème de connexion"><label for="q6b">Problème de connexion</label></div>
+        <div class="opt"><input type="radio" name="q6" id="q6c" value="Problème de son ou de compréhension"><label for="q6c">Problème de son ou de compréhension</label></div>
+        <div class="opt"><input type="radio" name="q6" id="q6d" value="Autre"><label for="q6d">Autre (à préciser)</label></div>
+      </div>
+      <div class="other-box" id="otherBox">
+        <input type="text" id="q6other" name="q6other" maxlength="300" placeholder="Précisez la difficulté rencontrée" aria-label="Précisez la difficulté rencontrée">
+      </div>
+      <div class="err" id="q6err">Merci de choisir une réponse (et de préciser si vous choisissez « Autre »).</div>
+    </fieldset>
+
+    <fieldset class="q">
+      <legend><label for="q7">7. Que pouvons-nous améliorer pour rendre nos prochaines formations plus utiles et intéressantes ?</label></legend>
+      <textarea id="q7" name="q7" placeholder="Votre réponse"></textarea>
+    </fieldset>
+
+    <fieldset class="q">
+      <legend><label for="q8">8. Quels thèmes aimeriez-vous voir abordés lors de nos prochaines formations ?</label></legend>
+      <textarea id="q8" name="q8" placeholder="Votre réponse"></textarea>
+    </fieldset>
+
+    <!-- Champ piège anti-robots : doit rester vide -->
+    <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></label></div>
+
+    <div class="actions">
+      <button type="submit" id="send">Envoyer mes réponses</button>
+      <div class="status" id="status" role="alert"></div>
+    </div>
+  </form>
+
+  <section class="thanks" id="thanks" aria-live="polite">
+    <div class="tick">✓</div>
+    <h2>Merci !</h2>
+    <p>Merci pour votre participation et pour le temps consacré à ce retour. Vos réponses comptent pour l’amélioration continue des activités de l’UNJED-Bénin.</p>
+  </section>
+
+  <footer>UNJED-BÉNIN – Union Nationale des Jeunes Engagés pour le Développement du Bénin</footer>
+</div>
+
+<script>
+  // ⚠️ À MODIFIER : collez ici l'URL de déploiement de votre Google Apps Script (elle se termine par /exec)
+  const SCRIPT_URL = "COLLER_ICI_L_URL_DU_SCRIPT";
+
+  const form = document.getElementById("form");
+  const statusEl = document.getElementById("status");
+  const sendBtn = document.getElementById("send");
+  const otherBox = document.getElementById("otherBox");
+  const otherInput = document.getElementById("q6other");
+
+  // Afficher le champ « à préciser » quand « Autre » est choisi
+  document.querySelectorAll('input[name="q6"]').forEach(function (r) {
+    r.addEventListener("change", function () {
+      const isOther = document.getElementById("q6d").checked;
+      otherBox.classList.toggle("show", isOther);
+      if (isOther) otherInput.focus();
+    });
+  });
+
+  // Retirer l'erreur dès qu'on répond
+  document.querySelectorAll("fieldset.q").forEach(function (fs) {
+    fs.addEventListener("change", function () { fs.classList.remove("invalid"); });
+  });
+
+  function checked(name) {
+    const el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : "";
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    statusEl.textContent = "";
+    let firstBad = null;
+
+    document.querySelectorAll('fieldset[data-required="true"]').forEach(function (fs) {
+      const name = fs.getAttribute("data-name");
+      let bad = !checked(name);
+      if (name === "q6" && checked("q6") === "Autre" && !otherInput.value.trim()) bad = true;
+      fs.classList.toggle("invalid", bad);
+      if (bad && !firstBad) firstBad = fs;
+    });
+    if (firstBad) {
+      firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
+      statusEl.textContent = "Veuillez répondre aux questions marquées d’un astérisque (*).";
+      return;
+    }
+
+    if (document.getElementById("website").value) return; // robot détecté
+
+    if (SCRIPT_URL.indexOf("script.google.com") === -1) {
+      statusEl.textContent = "Le formulaire n’est pas encore relié à Google Sheets (URL du script manquante).";
+      return;
+    }
+
+    let q6 = checked("q6");
+    if (q6 === "Autre") q6 = "Autre : " + otherInput.value.trim();
+
+    const data = new URLSearchParams();
+    data.append("q1", checked("q1"));
+    data.append("q2", checked("q2"));
+    data.append("q3", document.getElementById("q3").value.trim());
+    data.append("q4", checked("q4"));
+    data.append("q5", document.getElementById("q5").value.trim());
+    data.append("q6", q6);
+    data.append("q7", document.getElementById("q7").value.trim());
+    data.append("q8", document.getElementById("q8").value.trim());
+    data.append("website", "");
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Envoi en cours…";
+
+    // Google Apps Script ne renvoie pas d'en-têtes CORS : on utilise no-cors (la réponse reste opaque mais l'envoi aboutit)
+    fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body: data })
+      .then(function () {
+        form.style.display = "none";
+        document.getElementById("thanks").style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      })
+      .catch(function () {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Envoyer mes réponses";
+        statusEl.textContent = "L’envoi a échoué. Vérifiez votre connexion internet et réessayez.";
+      });
+  });
+</script>
+</body>
+</html>
